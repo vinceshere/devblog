@@ -1,0 +1,18 @@
+# Site settings
+title: Natura Dev Blog
+email:
+author:
+description:
+url:
+
+defaults:
+- scope:
+    path: "assets/images"
+  values:
+    image: true
+
+# Build settings
+permalink: :title/
+sass:
+  style: :compressed
+  sass_dir: _sass

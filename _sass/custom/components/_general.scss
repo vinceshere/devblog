@@ -1,0 +1,12 @@
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+* {
+  &:focus,
+  &:active {
+    box-shadow: none;
+    outline: 0;
+  }
+}
