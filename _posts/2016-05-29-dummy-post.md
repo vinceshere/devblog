@@ -3,7 +3,7 @@ layout: post
 title: A Trip
 date: '2016-05-29'
 author: joao_albuquerque
-categories: Blog
+categories: Atom
 featured_image: sample/post-full.jpg
 ---
 

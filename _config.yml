@@ -3,13 +3,22 @@ title: Natura Dev Blog
 email:
 author:
 description:
-url:
+url: ""
+
+collections:
+  category:
+    output: true
 
 defaults:
 - scope:
     path: "assets/images"
   values:
     image: true
+- scope:
+    path: "category"
+    type: category
+  values:
+    layout: "category"
 
 # Build settings
 permalink: :title/

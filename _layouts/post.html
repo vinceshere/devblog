@@ -20,8 +20,7 @@
             <div class="post-header">
               <div class="category">
                 {% for category in categories %}
-                {{category | inspect}}
-                <a href="{{site.baseurl}}/categories/{{category | slugize}}">{{category}}</a>
+                <a href="{{site.baseurl}}/category/{{category | slugify }}">{{category}}</a>
                 {% unless forloop.last %}&nbsp;{% endunless %}
                 {% endfor %}
               </div>

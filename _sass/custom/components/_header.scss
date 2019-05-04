@@ -81,6 +81,10 @@
       &:focus {
         border-bottom: 1px solid $header-top-bg;
         width: 147px;
+
+        &::placeholder {
+          color: $header-separator-bg;
+        }
       }
     }
   }

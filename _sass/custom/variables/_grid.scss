@@ -11,7 +11,7 @@ $grid-breakpoints: (
   xl: 1200px
 );
 
-@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-ascending($grid-breakpoints, '$grid-breakpoints');
 @include _assert-starts-at-zero($grid-breakpoints);
 
 
@@ -26,7 +26,7 @@ $container-max-widths: (
   xl: 1200px
 );
 
-@include _assert-ascending($container-max-widths, "$container-max-widths");
+@include _assert-ascending($container-max-widths, '$container-max-widths');
 
 
 // Grid columns
