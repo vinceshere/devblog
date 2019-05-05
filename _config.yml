@@ -1,4 +1,3 @@
-# Site settings
 title: Natura Dev Blog
 email:
 author:
@@ -11,7 +10,6 @@ defaults:
   values:
     image: true
 
-# Build settings
 permalink: :title/
 sass:
   style: :compressed
@@ -20,5 +18,6 @@ sass:
 plugins:
   - jekyll-paginate
 
-paginate: 9
-paginate_path: "/page/:num/"
+collections:
+  category:
+    output: true

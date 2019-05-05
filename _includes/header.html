@@ -19,17 +19,12 @@
 
       <div class="col-auto">
         <nav class="site-nav">
-          <a href="{{ site.baseurl }}/categories/">Developer API</a>
+          {% assign ordered_categories = site.category | sort:"order" %}
+          {% for category in ordered_categories %}
+          <a href="{{ site.baseurl }}/category/{{ category.slug }}">{{ category.title }}</a>
           <span class="separator"></span>
-          <a href="{{ site.baseurl }}/categories/">Atom</a>
-          <span class="separator"></span>
-          <a href="{{ site.baseurl }}/categories/">Electron</a>
-          <span class="separator"></span>
-          <a href="{{ site.baseurl }}/categories/">Features</a>
-          <span class="separator"></span>
-          <a href="{{ site.baseurl }}/categories/">Resources</a>
-          <span class="separator"></span>
-          <a href="{{ site.baseurl }}/archive/">Ver todos ({{ site.posts | size }})</a>
+          {% endfor %}
+          <a href="{{ site.baseurl }}/">Ver todos ({{ site.posts | size }})</a>
         </nav>
       </div>
 

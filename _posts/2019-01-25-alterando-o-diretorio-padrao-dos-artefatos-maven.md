@@ -1,14 +1,11 @@
 ---
 layout: post
 title: Alterando o diretório padrão dos artefatos Maven
-date: '2019-01-25'
 author: joao_albuquerque
 category: Developer API
 featured_image: sample/post-thumb-3.jpg
 excerpt: Algumas vezes pode ser interessante mudar o diretório padrão em que o repositório do Maven armazena seus artefatos.
 ---
-
-# Post content
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra enim dapibus, maximus elit quis, eleifend massa. Proin venenatis pharetra nisl et condimentum. Quisque ut nulla quis sapien luctus feugiat finibus ac eros. Maecenas semper libero in suscipit aliquam. Etiam et est lacinia, suscipit nisi ac, imperdiet lorem. Duis fringilla porttitor nisl quis tincidunt. Etiam scelerisque arcu quis ex ullamcorper suscipit. Sed auctor dolor id semper aliquam. Maecenas lorem purus, elementum nec metus quis, volutpat tincidunt nunc. Ut lobortis justo non lectus vehicula pretium. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 

@@ -1,14 +1,11 @@
 ---
 layout: post
 title: Iniciando Se No JSF – 03 – A Arquitetura Da Aplicação
-date: '2019-01-04'
 author: joao_albuquerque
 category: Electron
 featured_image: sample/post-thumb-7.jpg
 excerpt: De cima para baixo temos as pastas META-INF e WEB-INF a primeira delas não tem muita relevância nesse caso já a segunda é reponsável por armazenar os arquivos de configuração de nossa aplicação
 ---
-
-# Post content
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra enim dapibus, maximus elit quis, eleifend massa. Proin venenatis pharetra nisl et condimentum. Quisque ut nulla quis sapien luctus feugiat finibus ac eros. Maecenas semper libero in suscipit aliquam. Etiam et est lacinia, suscipit nisi ac, imperdiet lorem. Duis fringilla porttitor nisl quis tincidunt. Etiam scelerisque arcu quis ex ullamcorper suscipit. Sed auctor dolor id semper aliquam. Maecenas lorem purus, elementum nec metus quis, volutpat tincidunt nunc. Ut lobortis justo non lectus vehicula pretium. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 

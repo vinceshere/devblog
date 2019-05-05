@@ -1,15 +1,12 @@
 ---
 layout: post
 title: Criando um Archetype Maven a partir de um projeto existente
-date: '2019-02-21'
 author: joao_albuquerque
 category: Atom
 featured_image: sample/post-full.jpg
 excerpt: Maven archetypes são templates de projetos que possibilitam iniciar o desenvolvimento de novos projetos rapidamente baseando se em uma base de arquivos, xml’s e classes já existentes.
 featured_post: true
 ---
-
-# Post content
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra enim dapibus, maximus elit quis, eleifend massa. Proin venenatis pharetra nisl et condimentum. Quisque ut nulla quis sapien luctus feugiat finibus ac eros. Maecenas semper libero in suscipit aliquam. Etiam et est lacinia, suscipit nisi ac, imperdiet lorem. Duis fringilla porttitor nisl quis tincidunt. Etiam scelerisque arcu quis ex ullamcorper suscipit. Sed auctor dolor id semper aliquam. Maecenas lorem purus, elementum nec metus quis, volutpat tincidunt nunc. Ut lobortis justo non lectus vehicula pretium. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 

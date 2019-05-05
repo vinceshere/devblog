@@ -1,14 +1,11 @@
 ---
 layout: post
 title: Fazendo parser de objetos com o Dozer.
-date: '2018-12-20'
 author: joao_albuquerque
 category: Features
 featured_image: sample/post-thumb-8.jpg
 excerpt: O framework Dozer é um parser de um POJO para outro POJO, o que significa dizer que ele copia automaticamente, de forma recursiva, dados de um objeto para outro.
 ---
-
-# Post content
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra enim dapibus, maximus elit quis, eleifend massa. Proin venenatis pharetra nisl et condimentum. Quisque ut nulla quis sapien luctus feugiat finibus ac eros. Maecenas semper libero in suscipit aliquam. Etiam et est lacinia, suscipit nisi ac, imperdiet lorem. Duis fringilla porttitor nisl quis tincidunt. Etiam scelerisque arcu quis ex ullamcorper suscipit. Sed auctor dolor id semper aliquam. Maecenas lorem purus, elementum nec metus quis, volutpat tincidunt nunc. Ut lobortis justo non lectus vehicula pretium. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 

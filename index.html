@@ -4,61 +4,24 @@ layout: default
 <div class="container">
   <div class="row">
     <div class="col">
-      {% assign filter_post = site.posts limit: 1 | where:"featured_post", "true" %}
-      {% assign post = filter_post[0] %}
+      {% assign post = site.posts[0] %}
+      {% assign posts_count = site.posts.size %}
 
-      <div class="post post-big">
-        <a href="{{ site.baseurl }}/{{ post.slug }}" class="post-image">
-          <img src="{{ site.baseurl }}/assets/images/{{ post.featured_image }}" alt="">
-        </a>
-        <div class="post-content">
-          <div class="post-header">
-            <span class="date">{% include post_date.html %}</span>
-            <span class="separator"></span>
-
-            {% for category in post.categories %}
-            <a href="{{ site.baseurl }}/category/{{ category | slugify }}" class="category">{{ category }}</a>
-            {% endfor %}
-          </div>
-          <h2 class="post-title"><a href="{{ site.baseurl }}/{{ post.slug }}">{{ post.title }}</a>
-          </h2>
-          <p class="post-excerpt">{{ post.excerpt }}</p>
-          <a class="post-link" href="{{ site.baseurl }}/{{ post.slug }}">
-            <span>Leia mais</span>
-          </a>
-        </div>
-      </div>
+      {% include post-big.html post=post %}
     </div>
   </div>
 
-  <div class="row posts-list">
-    {% for post in paginator.posts %}
-    <div class="col-sm-12 col-lg-4 col-md-6">
-      <div class="post post-small">
-        <a href="{{ site.baseurl }}/{{ post.slug }}" class="post-image">
-          <img src="{{ site.baseurl }}/assets/images/{{ post.featured_image }}" alt="">
-        </a>
-        <div class="post-content">
-          <div class="post-header">
-            <span class="date">{% include post_date.html date=post.date %}</span>
-            <span class="separator"></span>
-
-            {% for category in post.categories %}
-            <a href="{{ site.baseurl }}/category/{{ category | slugify }}" class="category">{{ category }}</a>
-            {% endfor %}
-          </div>
-          <h2 class="post-title"><a href="{{ site.baseurl }}/{{ post.slug }}">{{ post.title }}</a>
-          </h2>
-          <p class="post-excerpt">{{ post.excerpt | strip_html }}</p>
-        </div>
-      </div>
-    </div>
+  <div class="row posts-list" data-page="1">
+    {% for post in site.posts limit:9 offset:1 %}
+    {% include post-small.html post=post %}
     {% endfor %}
   </div>
 
+  {% if posts_count > 9 %}
   <div class="row">
     <div class="col text-center">
       <a href="#" class="btn btn-primary btn-lg">Posts antigos</a>
     </div>
   </div>
+  {% endif %}
 </div>

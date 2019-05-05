@@ -29,7 +29,7 @@
                 <img src="{{site.baseurl}}/assets/images/authors/{{ author.image }}" alt="">
                 <span class="author-name">
                   <!-- Personal Info. -->
-                  Por <span>{{ author.name }} | <span>{{ page.date | date: "%d/%m/%Y" }}</span>
+                  <span>Por</span> <span class="name">{{ author.name }} <span class="separator">|</span></span> <span class="date">{{ page.date | date: "%d/%m/%Y" }}</span>
                 </span>
               </div>
             </div>
@@ -37,82 +37,68 @@
             <div class="post-entry">
               {{ content }}
             </div>
+
+            <div class="separator"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
+  {% assign max_related = 4 %}
+  {% assign max_related_counter = 0 %}
+  {% assign related_posts = site.categories[page.category] %}
+
+  {% if related_posts.size >= 2 %}
   <div class="related-posts">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-sm-10">
-          <h2 class="related-title">Leia também:</h2>
+          <div class="content">
+            <h2 class="related-title">Leia também:</h2>
 
-          {% assign maxRelated = 4 %}
-          {% assign minCommonTags =  1 %}
-          {% assign maxRelatedCounter = 0 %}
+            {% for post in related_posts %}
 
-          {% for post in site.posts %}
+            {% if max_related_counter >= max_related %}{% break %}{% endif %}
 
-          {% assign sameTagCount = 0 %}
-          {% assign commonTags = '' %}
-
-          {% for category in post.categories %}
-          {% if post.url != page.url %}
-          {% if page.categories contains category %}
-          {% assign sameTagCount = sameTagCount | plus: 1 %}
-          {% capture tagmarkup %} <span class="label label-default">{{ category }}</span> {% endcapture %}
-          {% assign commonTags = commonTags | append: tagmarkup %}
-          {% endif %}
-          {% endif %}
-          {% endfor %}
-
-          {% if sameTagCount >= minCommonTags %}
-
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            <div class="rel">
-              <h5>{{ post.title }}</h5>
-              <img width="100%" src="/thumbs-small/{{post.image}}">
-            </div>
-          </a>
-
-          {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
-          {% if maxRelatedCounter >= maxRelated %}
-          {% break %}
-          {% endif %}
-          {% endif %}
-          {% endfor %}
-
+            {% if post.url != page.url %}
+              <a class="related-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+              {% assign max_related_counter = max_related_counter | plus:1 %}
+            {% endif %}
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>
   </div>
+  {% endif %}
 
-  <div class="comments">
+  <div class="post-comments">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-sm-10">
-          <div id="disqus_thread"></div>
-          <script>
-            /**
-            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-            /*
-            var disqus_config = function () {
-            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            */
-            (function () { // DON'T EDIT BELOW THIS LINE
-              var d = document, s = d.createElement('script');
-              s.src = 'https://natura-dev-blog-dev.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-            })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
-              Disqus.</a></noscript>
+          <div class="comments-content">
+            <div id="disqus_thread"></div>
+            <script>
+              /**
+              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+              *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+              /*
+              var disqus_config = function () {
+              this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+              };
+              */
+              (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://natura-dev-blog-dev.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+              })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+                Disqus.</a></noscript>
+          </div>
         </div>
       </div>
     </div>

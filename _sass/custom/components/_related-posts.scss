@@ -1,0 +1,40 @@
+.related-posts {
+  background-color: $related-bg;
+  padding: 3.125rem 0;
+
+  .content {
+    padding: 0 7.5rem;
+  }
+
+  .related-title {
+    margin-bottom: 2.375rem;
+  }
+
+  .related-link {
+    color: theme-color('secondary');
+    display: block;
+    font-family: $font-family-sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.875rem;
+    margin-bottom: 1.25rem;
+    padding-left: 1.125rem;
+    position: relative;
+
+    &::before {
+      background-image: url('../assets/images/icon-arrow-right.png');
+      background-position: center;
+      background-size: cover;
+      content: '';
+      height: .8125rem;
+      left: 0;
+      position: absolute;
+      top: .5rem;
+      width: .5rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

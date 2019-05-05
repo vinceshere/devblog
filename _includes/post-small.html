@@ -1,0 +1,20 @@
+<div class="col-sm-12 col-lg-4 col-md-6">
+  <div class="post post-small">
+    <a href="{{ site.baseurl }}/{{ include.post.slug }}" class="post-image">
+      <img src="{{ site.baseurl }}/assets/images/{{ include.post.featured_image }}" alt="">
+    </a>
+    <div class="post-content">
+      <div class="post-header">
+        <span class="date">{% include post_date.html date=include.post.date %}</span>
+        <span class="separator"></span>
+
+        {% for category in include.post.categories %}
+        <a href="{{ site.baseurl }}/category/{{ category | slugify }}" class="category">{{ category }}</a>
+        {% endfor %}
+      </div>
+      <h2 class="post-title"><a href="{{ site.baseurl }}/{{ include.post.slug }}">{{ include.post.title }}</a>
+      </h2>
+      <p class="post-excerpt">{{ include.post.excerpt | strip_html }}</p>
+    </div>
+  </div>
+</div>

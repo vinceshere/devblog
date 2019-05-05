@@ -1,14 +1,10 @@
 ---
 layout: post
 title: Usando código Groovy juntamente com código Java
-date: '2019-01-30'
-author: joao_albuquerque
 category: Features
 featured_image: sample/post-thumb-2.jpg
 excerpt: Existem várias maneiras de se usar Groovy junto ao seu código Java. As mais usadas são com Gradle e Maven. No maven podemos usar o GMaven ou o Groovy Eclipse compiler plugin. 
 ---
-
-# Post content
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra enim dapibus, maximus elit quis, eleifend massa. Proin venenatis pharetra nisl et condimentum. Quisque ut nulla quis sapien luctus feugiat finibus ac eros. Maecenas semper libero in suscipit aliquam. Etiam et est lacinia, suscipit nisi ac, imperdiet lorem. Duis fringilla porttitor nisl quis tincidunt. Etiam scelerisque arcu quis ex ullamcorper suscipit. Sed auctor dolor id semper aliquam. Maecenas lorem purus, elementum nec metus quis, volutpat tincidunt nunc. Ut lobortis justo non lectus vehicula pretium. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 
