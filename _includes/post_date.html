@@ -1,0 +1,2 @@
+{% assign m = post.date | date: "%-m" | minus: 1 %}
+{{ post.date | date: "%d"}} {{ site.data.months.short_months[m] }}, {{ post.date | date: "%Y" }}

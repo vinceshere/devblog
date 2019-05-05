@@ -17,11 +17,8 @@ sass:
   style: :compressed
   sass_dir: _sass
 
-gems:
-  - jekyll-paginate-v2
+plugins:
+  - jekyll-paginate
 
-pagination:
-  enabled: true
-  locale: ''
-  per_page: 9
-  permalink: '/page/:num/'
+paginate: 9
+paginate_path: "/page/:num/"

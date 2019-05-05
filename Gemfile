@@ -10,4 +10,4 @@ gem "jekyll", "~> 3.8"
 
 gem "jekyll-livereload", "~> 0.2.2"
 
-gem "jekyll-paginate-v2", "~> 2.0"
+gem "jekyll-paginate", "~> 1.1"

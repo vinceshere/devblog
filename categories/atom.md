@@ -1,5 +1,5 @@
 ---
-layout: default
-category: Atom
+layout: category
+category: atom
 permalink: "/category/atom"
 ---
