@@ -9,4 +9,14 @@
       width: 100%;
     }
   }
+
+  .post-container {
+    margin-top: -10rem;
+    position: relative;
+  }
+
+  .post-content {
+    background-color: $white;
+    padding: 2.25rem 7.5rem;
+  }
 }

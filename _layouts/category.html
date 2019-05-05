@@ -1,17 +1,9 @@
 ---
 layout: default
-pagination:
-  enabled: true
 ---
 <div class="container">
-  <div class="row">
-    <div class="col">
-      {% include post-big.html %}
-    </div>
-  </div>
-
   <div class="row posts-list">
-    {% for post in paginator.posts %}
+    {% for post in page.posts %}
     <div class="col-sm-12 col-lg-4 col-md-6">
       {% include post-small.html post=post %}
     </div>

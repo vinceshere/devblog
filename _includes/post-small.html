@@ -1,16 +1,19 @@
 <div class="post post-small">
-  <a href="#" class="post-image">
-    <img src="{{ site.baseurl }}/assets/images/sample/post-thumb-big.jpg" alt="">
+  <a href="{{ site.baseurl }}/{{ post.slug }}" class="post-image">
+    <img src="{{ site.baseurl }}/assets/images/{{ post.featured_image }}" alt="">
   </a>
   <div class="post-content">
     <div class="post-header">
-      <span class="date">21 fev, 2019</span>
+      <span class="date">{{ post.date | date: "%-d"}} {{ post.date | brazil_short_month }},
+        {{ post.date | date: "%Y" }}</span>
       <span class="separator"></span>
-      <a href="#" class="category">Atom</a>
+
+      {% for category in post.categories %}
+      <a href="{{ site.baseurl }}/category/{{ category | slugify }}" class="category">{{ category }}</a>
+      {% endfor %}
     </div>
-    <h2 class="post-title"><a href="#">Criando um Archetype Maven a partir de um projeto existente</a></h2>
-    <p class="post-excerpt">Maven archetypes são templates de projetos que possibilitam iniciar o desenvolvimento de
-      novos projetos rapidamente
-      baseando se em uma base de arquivos, xml’s e classes já existentes.</p>
+    <h2 class="post-title"><a href="{{ site.baseurl }}/{{ post.slug }}">{{ post.title }}</a>
+    </h2>
+    <p class="post-excerpt">{{ post.excerpt | strip_html }}</p>
   </div>
 </div>

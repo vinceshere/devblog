@@ -5,23 +5,23 @@ author:
 description:
 url: ""
 
-collections:
-  category:
-    output: true
-
 defaults:
 - scope:
     path: "assets/images"
   values:
     image: true
-- scope:
-    path: "category"
-    type: category
-  values:
-    layout: "category"
 
 # Build settings
 permalink: :title/
 sass:
   style: :compressed
   sass_dir: _sass
+
+gems:
+  - jekyll-paginate-v2
+
+pagination:
+  enabled: true
+  locale: ''
+  per_page: 9
+  permalink: '/page/:num/'
