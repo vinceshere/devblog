@@ -12,12 +12,25 @@
       font-weight: 700;
     }
   }
+
+  @include media-breakpoint-down(md) {
+    padding: .375rem;
+
+    span {
+      font-size: .6875rem;
+      text-align: center;
+    }
+  }
 }
 
 .blog-header {
   align-items: center;
   display: flex;
   height: 7.3125rem;
+
+  .logo-mobile {
+    display: none;
+  }
 
   .site-nav {
     a,
@@ -31,6 +44,43 @@
       font-family: $font-family-sans-serif;
       font-size: .8125rem;
       text-transform: uppercase;
+
+      &.close-menu {
+        display: none;
+      }
+
+      @include media-breakpoint-down(md) {
+        border-top: .125rem solid $header-top-bg;
+        color: $header-separator-bg;
+        display: block;
+        font-weight: bold;
+        padding: 1.1875rem 0;
+
+        &:last-child {
+          border-bottom: .125rem solid $header-top-bg;
+        }
+
+        &.close-menu {
+          border-top: 0;
+          display: block;
+
+          span,
+          img {
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          img {
+            margin-right: .5rem;
+          }
+
+          span {
+            color: theme-color('secondary');
+            font-weight: normal;
+            text-transform: none;
+          }
+        }
+      }
     }
 
     .separator {
@@ -38,6 +88,22 @@
       height: .625rem;
       margin: 0 1rem;
       width: .0625rem;
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      background-color: $white;
+      height: 100vh;
+      left: -16.25rem;
+      padding: 2rem;
+      position: fixed;
+      top: 0;
+      transition: left .4s ease;
+      width: 16.25rem;
+      z-index: 100;
     }
   }
 
@@ -87,5 +153,153 @@
         }
       }
     }
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    height: 4.0625rem;
+
+    .logo-desktop {
+      display: none;
+    }
+
+    .logo-mobile {
+      display: block;
+    }
+  }
+}
+
+.background-menu {
+  display: none;
+
+  @include media-breakpoint-down(md) {
+    background-color: transparentize($black, .75);
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 99;
+  }
+}
+
+.menu-open {
+  .background-menu {
+    display: block;
+  }
+
+  .blog-header {
+    .site-nav {
+      left: 0;
+    }
+  }
+}
+
+.open-menu-wrapper {
+  display: none;
+
+  .open-menu {
+    display: block;
+    height: 1.125rem;
+    position: relative;
+    width: 1.4375rem;
+
+    .bar {
+      background-color: theme-color('secondary');
+      height: .1875rem;
+      left: 0;
+      position: absolute;
+      width: 100%;
+
+      &:first-child {
+        top: 0;
+      }
+
+      &:nth-child(n+2) {
+        top: 50%;
+      }
+
+      &:last-child {
+        top: 100%;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+}
+
+.site-nav-wrapper {
+  @include media-breakpoint-down(md) {
+    position: fixed;
+    z-index: 100;
+  }
+}
+
+.open-search {
+  display: none;
+
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+}
+
+.site-search-mobile {
+  display: none;
+  margin: 0 auto;
+  max-height: 0;
+  overflow-x: visible;
+  overflow-y: hidden;
+  position: relative;
+  text-align: center;
+  transition: max-height .3s ease, padding .3s ease;
+  width: 15.1875rem;
+
+  input {
+    border: 0;
+    border-bottom: .0625rem solid $header-top-bg;
+    font-family: $font-family-sans-serif;
+    font-size: .9375rem;
+    padding: .6875rem;
+    text-align: center;
+    width: 11.5625rem;
+
+    &::placeholder {
+      color: $header-separator-bg;
+    }
+  }
+
+  button {
+    background: none;
+    border: 0;
+    display: block;
+    height: .75rem;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: .75rem;
+
+    img {
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+}
+
+.search-open {
+  .site-search-mobile {
+    max-height: 100px;
+    padding: 1.6875rem 0;
   }
 }

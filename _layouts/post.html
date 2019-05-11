@@ -15,7 +15,7 @@
 
     <div class="container post-container">
       <div class="row justify-content-center">
-        <div class="col-sm-10">
+        <div class="col-sm-12 col-md-10">
           <div class="post-content">
             <div class="post-header">
               <div class="category">
@@ -31,6 +31,9 @@
                   <!-- Personal Info. -->
                   <span>Por</span> <span class="name">{{ author.name }} <span class="separator">|</span></span> <span class="date">{{ page.date | date: "%d/%m/%Y" }}</span>
                 </span>
+              </div>
+              <div class="date-mobile">
+                <span class="date">{{ page.date | date: "%d/%m/%Y" }}</span>
               </div>
             </div>
 
@@ -53,7 +56,7 @@
   <div class="related-posts">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-sm-10">
+        <div class="col-sm-12 col-md-10">
           <div class="content">
             <h2 class="related-title">Leia também:</h2>
 
@@ -76,7 +79,7 @@
   <div class="post-comments">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-sm-10">
+        <div class="col-sm-12 col-md-10">
           <div class="comments-content">
             <div id="disqus_thread"></div>
             <script>

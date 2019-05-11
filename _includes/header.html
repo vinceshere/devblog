@@ -11,14 +11,28 @@
 <header class="blog-header">
   <div class="container">
     <div class="row align-items-center justify-content-between">
-      <div class="col-auto">
-        <a href="{{ site.baseurl }}/" class="blog-brand">
-          <img src="{{ site.baseurl }}/assets/images/logo-header.png" alt="" />
+      <div class="col-auto open-menu-wrapper">
+        <a href="#" class="open-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </a>
       </div>
 
       <div class="col-auto">
+        <a href="{{ site.baseurl }}/" class="blog-brand">
+          <img class="logo-desktop" src="{{ site.baseurl }}/assets/images/logo-header.png" alt="" />
+          <img class="logo-mobile" src="{{ site.baseurl }}/assets/images/logo-header-mobile.png" alt="" />
+        </a>
+      </div>
+
+      <div class="col-auto site-nav-wrapper">
         <nav class="site-nav">
+          <a href="#" class="close-menu">
+            <img src="{{ site.baseurl }}/assets/images/icon-close.png" alt="" />
+            <span>Menu</span>
+          </a>
+
           {% assign ordered_categories = site.category | sort:"order" %}
           {% for category in ordered_categories %}
           <a href="{{ site.baseurl }}/category/{{ category.slug }}">{{ category.title }}</a>
@@ -26,6 +40,8 @@
           {% endfor %}
           <a href="{{ site.baseurl }}/">Ver todos ({{ site.posts | size }})</a>
         </nav>
+
+        <div class="background-menu"></div>
       </div>
 
       <div class="col-auto">
@@ -35,7 +51,19 @@
             <img src="{{ site.baseurl }}/assets/images/icon-search.png" alt="" />
           </button>
         </form>
+
+        <a href="#" class="open-search">
+          <img src="{{ site.baseurl }}/assets/images/icon-search-mobile.png" alt="" />
+        </a>
       </div>
     </div>
   </div>
+
 </header>
+
+<form class="site-search-mobile" action="{{ site.baseurl }}/search">
+  <input name="terms" type="text" placeholder="Buscar aqui" required>
+  <button type="submit">
+    <img src="{{ site.baseurl }}/assets/images/icon-arrow-right.svg" alt="">
+  </button>
+</form>

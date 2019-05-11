@@ -2,6 +2,15 @@
 layout: default
 ---
 <div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="search-result">
+        <h1 class="search-title">Arquivo da Categoria</h1>
+        <h2 class="search-terms">{{ page.category }}</h2>
+      </div>
+    </div>
+  </div>
+
   <div class="row posts-list" data-page="1" data-category="{{ page.category | slugify }}">
     {% for post in site.categories[page.category] %}
     {% include post-small.html post=post %}

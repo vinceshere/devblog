@@ -4,6 +4,10 @@
 
   .content {
     padding: 0 7.5rem;
+
+    @include media-breakpoint-down(md) {
+      padding: 0 1rem;
+    }
   }
 
   .related-title {

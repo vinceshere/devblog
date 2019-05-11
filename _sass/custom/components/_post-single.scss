@@ -8,11 +8,19 @@
       object-fit: cover;
       width: 100%;
     }
+
+    @include media-breakpoint-down(md) {
+      height: 15.625rem;
+    }
   }
 
   .post-container {
     margin-top: -10rem;
     position: relative;
+
+    @include media-breakpoint-down(md) {
+      margin-top: -6.25rem;
+    }
   }
 
   .post-content {
@@ -35,12 +43,23 @@
           font-family: $font-family-sans-serif;
           font-weight: 700;
         }
+
+        @include media-breakpoint-down(md) {
+          font-size: .8125rem;
+          margin-bottom: .625rem;
+        }
       }
 
       .post-title {
         line-height: 2.625rem;
         margin-bottom: 1.875rem;
         text-align: center;
+
+        @include media-breakpoint-down(md) {
+          font-size: 1.4375rem;
+          line-height: 1.75rem;
+          margin-bottom: 1.25rem;
+        }
       }
 
       .author {
@@ -57,6 +76,11 @@
           height: 2.5rem;
           margin-right: .625rem;
           width: 2.5rem;
+
+          @include media-breakpoint-down(md) {
+            height: 1.625rem;
+            width: 1.625rem;
+          }
         }
 
         span {
@@ -64,6 +88,10 @@
           font-family: $font-family-sans-serif;
           font-weight: 300;
           text-transform: uppercase;
+
+          @include media-breakpoint-down(md) {
+            font-size: .8125rem;
+          }
         }
 
         .name {
@@ -73,12 +101,37 @@
 
         .date {
           font-weight: bold;
+          @include media-breakpoint-down(md) {
+            display: none;
+          }
         }
 
         .separator {
           color: theme-color('secondary');
           font-weight: bold;
           margin: -.45rem .3rem 0;
+
+          @include media-breakpoint-down(md) {
+            display: none;
+          }
+        }
+      }
+
+      .date-mobile {
+        display: none;
+      }
+
+      @include media-breakpoint-down(md) {
+        border-bottom: .0625rem solid transparentize($header-separator-bg, .75);
+        margin-bottom: 1.25rem;
+        padding-bottom: 1.25rem;
+
+        .date-mobile {
+          color: $header-separator-bg;
+          display: block;
+          font-family: $font-family-sans-serif;
+          font-size: .75rem;
+          text-align: center;
         }
       }
     }
@@ -92,6 +145,12 @@
       h6 {
         margin-bottom: 1.5rem;
         margin-top: 3rem;
+
+        @include media-breakpoint-down(md) {
+          font-size: 1.4375rem;
+          line-height: 1.75rem;
+          margin-top: 2rem;
+        }
       }
 
       p {
@@ -115,6 +174,12 @@
           font-family: $font-family-sans-serif;
           font-size: 2.5rem;
           line-height: 2.8125rem;
+
+          @include media-breakpoint-down(md) {
+            font-size: 1.4375rem;
+            font-weight: 400;
+            line-height: 2.1875rem;
+          }
         }
       }
 
@@ -145,6 +210,15 @@
             content: '\2022';
             margin-right: .625rem;
           }
+
+          @include media-breakpoint-down(md) {
+            line-height: 1.3125rem;
+            margin-bottom: 1rem;
+          }
+        }
+
+        @include media-breakpoint-down(md) {
+          padding: 0;
         }
       }
 
@@ -170,6 +244,10 @@
       height: 2px;
       margin-top: 2.25rem;
       width: 100%;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 1rem;
     }
   }
 }

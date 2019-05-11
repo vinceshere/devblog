@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Documentando aplicações REST com SpringBoot e Swagger
+title: Dummy Post
 author: joao_albuquerque
 category: Electron
 featured_image: sample/post-thumb-1.jpg
