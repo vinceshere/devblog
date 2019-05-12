@@ -5,11 +5,20 @@
 
 .btn-primary {
   color: $white;
+  position: relative;
 
   &.btn-lg {
     font-size: 1rem;
     font-weight: 700;
     padding: 1.625rem 9.625rem;
+
+    span {
+      display: inline-block;
+    }
+
+    span, img {
+      vertical-align: middle;
+    }
 
     &:hover {
       color: $white;
@@ -19,6 +28,16 @@
       display: block;
       line-height: 1;
       padding: 1rem;
+    }
+  }
+}
+
+.loading {
+  .btn-primary {
+    &.btn-lg {
+      span {
+        opacity: 0;
+      }
     }
   }
 }

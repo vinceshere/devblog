@@ -12,15 +12,19 @@ layout: default
   </div>
 
   <div class="row posts-list" data-page="1" data-category="{{ page.category | slugify }}">
-    {% for post in site.categories[page.category] %}
+    {% for post in site.categories[page.category] limit:9 %}
+    {% assign posts_count = site.categories[page.category].size %}
     {% include post-small.html post=post %}
     {% endfor %}
   </div>
 
-  {% if posts_count > site.paginate %}
-  <div class="row">
+  {% if posts_count > 9 %}
+  <div class="row search-load-more">
     <div class="col text-center">
-      <a href="#" class="btn btn-primary btn-lg">Posts antigos</a>
+      <a href="#" class="btn btn-primary btn-lg load-more">
+        <span class="text">Posts antigos</span>
+        <img class="site-loading" src="{{site.baseurl}}/assets/images/loading.svg" alt="">
+      </a>
     </div>
   </div>
   {% endif %}

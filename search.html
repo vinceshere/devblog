@@ -6,23 +6,24 @@ layout: default
     <div class="col">
       <div class="search-result">
         <h1 class="search-title">Resultado da busca</h1>
-        <h2 class="search-terms">Diretório padrão</h2>
+        <h2 class="search-terms"></h2>
         <div class="result-count">
-          <strong>12</strong> <span>resultado(s) encontrado(s)</span>
+          <strong>0</strong> <span>resultado(s) encontrado(s)</span>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="row posts-list" data-page="1">
-    {% for post in site.posts limit:9 offset:1 %}
-    {% include post-small.html post=post %}
-    {% endfor %}
+  <div class="row posts-list" data-page="1" data-search="">
+
   </div>
 
   <div class="row search-load-more">
     <div class="col text-center">
-      <a href="#" class="btn btn-primary btn-lg">Ver mais posts</a>
+      <a href="#" class="btn btn-primary btn-lg load-more">
+        <span class="text">Posts antigos</span>
+        <img class="site-loading" src="{{site.baseurl}}/assets/images/loading.svg" alt="">
+      </a>
     </div>
   </div>
 </div>

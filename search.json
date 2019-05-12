@@ -1,14 +1,15 @@
 ---
 ---
 [
-{% for post in site.posts %}
-  {
+{% for post in site.posts %}  {
     "title": "{{ post.title | escape }}",
+    "excerpt": "{{ post.excerpt }}",
     "url": "{{ site.baseurl }}{{ post.url }}",
     "featured_image": "{{ site.baseurl }}/assets/images/{{ post.featured_image }}",
-    "category": "{{ post.category | slugify }}",
+    "category_url": "{{ site.baseurl }}/category/{{ post.category | slugify }}",
+    "category_name": "{{ post.category }}",
+    "category_slug": "{{ post.category | slugify }}",
     "tags": "{{ post.tags | join: ', ' }}",
-    "date": "{{ post.date }}"
-  }{% unless forloop.last %},{% endunless %}
-{% endfor %}
+    "date": "{%- include post_date.html date=post.date -%}"
+  }{% unless forloop.last %},{% endunless %}{% endfor %}
 ]
