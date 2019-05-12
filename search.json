@@ -4,6 +4,7 @@
 {% for post in site.posts %}  {
     "title": "{{ post.title | escape }}",
     "excerpt": "{{ post.excerpt }}",
+    "content": "{{ post.content | strip_html | truncatewords:50 }}",
     "url": "{{ site.baseurl }}{{ post.url }}",
     "featured_image": "{{ site.baseurl }}/assets/images/{{ post.featured_image }}",
     "category_url": "{{ site.baseurl }}/category/{{ post.category | slugify }}",
