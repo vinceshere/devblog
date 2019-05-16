@@ -9,11 +9,10 @@
 
       <div class="col-auto">
         <nav class="site-nav">
-          <a href="{{ site.baseurl }}/categories/">Developer API</a>
-          <a href="{{ site.baseurl }}/categories/">Atom</a>
-          <a href="{{ site.baseurl }}/categories/">Electron</a>
-          <a href="{{ site.baseurl }}/categories/">Features</a>
-          <a href="{{ site.baseurl }}/categories/">Resources</a>
+          {% assign ordered_categories = site.category | sort:"order" %}
+          {% for category in ordered_categories %}
+          <a href="{{ site.baseurl }}/category/{{ category.slug }}">{{ category.title }}</a>
+          {% endfor %}
         </nav>
       </div>
 
